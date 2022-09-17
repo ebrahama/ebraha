@@ -21,11 +21,13 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+ 
 }
 body{
     background: linear-gradient(-45deg,#4b0707,#000000);
-    background-size: 300%;
-    animation: gradient 8s infinite;
+    background-size: 250%;
+    animation: gradient 5s infinite;
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
 }
@@ -116,6 +118,7 @@ header ul li:hover{
     border-bottom-right-radius: 180px;
     margin-top: 30px;
 }
+
 .home .ls{
     color: rgba(255, 255, 255, 0.695);
     margin-left: 10px;
@@ -223,7 +226,6 @@ header ul li:hover{
    }
 
 
-
                /* PROJECT SEC  */  
 .project{
     color: white;
@@ -249,11 +251,16 @@ header ul li:hover{
     padding: 15px 25px;
 }
 .proimg{
-    background: rgba(250, 245, 245, 0.21);
+    background: rgba(250, 245, 245, 0.039);
     width: 650px;
-    height: 150px;
+    height: 146px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 2px;
 }
-
+.proimg img{
+    width: 100%;
+}
 .pro p{
     font-size: 12.5px;
     width: 290px;
@@ -265,7 +272,7 @@ header ul li:hover{
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3px;   
+    gap: 2px;   
     list-style-image: url('https://img.icons8.com/windows/16/FD7E14/--checkmark-yes.png');
 }
 .pro ul li{
@@ -396,7 +403,7 @@ padding: 10px 15px;
     background: rgb(255, 255, 255);
     align-items: center;
     padding: 10px;
-    font-size: 17px;
+    font-size: 19px;
     border-top:4px solid rgb(155, 155, 155);
     border-bottom:3px solid rgb(246, 92, 92);
     border-radius: 7px;
@@ -427,4 +434,166 @@ display: none;
 .cv ul li{
     margin: 10px;
 }
-/* media q sec */
+.contac .fom textarea{
+    font-size: 18px;
+    width: 90%;
+}
+
+
+       /* media q sec */
+@media(max-width:1440px){
+    .home .rs img{
+        max-width: 430px;
+    }
+    .pro{
+        width:550px;
+    }
+    .projects{
+        margin: 20px 0 30px 0;
+    }
+    .proimg{
+        width: 230px;
+        height: 120px;
+    }
+    .aboutinfo .abimg{
+        width: 360px;
+    }
+}
+@media(max-width:1270px){
+    .home .rs img{
+      display: none;
+    }
+}
+@media(max-width:1215px){
+    .conta{
+        width: 95%;
+    }
+   .pro{
+    flex-direction: column;
+    width: 350px;
+   } 
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        margin: 20px auto 30px auto;
+    }
+    .proimg{
+        background: rgba(250, 245, 245, 0.039);
+        width: 100%;
+        height: 170px;
+        border-radius: 10px;
+    }
+}
+@media(max-width:1140px){
+    .projects{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 85%;
+        margin: 20px auto 30px auto;
+    }
+    .proimg{
+        background: rgba(250, 245, 245, 0.039);
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
+    .pro{
+     width: 400px;
+    }
+}
+@media(max-width:999px){
+   .conta{
+    width: 100%;
+   }
+   .skilinfo{
+   flex-direction: column;
+   width: 600px;
+    }
+    .lo{
+        width: 400px;
+        margin: 10px auto;
+    }
+
+    .aboutinfo{
+        flex-direction: column;
+        width: 600px;
+    }
+    .aboutinfo .abimg{
+        margin: 10px;
+    }
+   .contac{
+    width: 600px;
+    flex-direction: column;
+   }
+   .contac .cv{
+     margin: 10px;
+   }
+}
+
+@media(max-width:700px){
+    header h1{
+     display: none;
+    }
+    .home{
+        justify-content: center;
+    }
+    .home .ls{
+        width: 100%;
+        margin-left: -60px;
+        font-size: 10px;
+    }
+    .home .ls p{
+        width: 400px;
+       font-size:15px;
+       margin-bottom: 20px;
+       margin-top: 20px;
+    }
+    .home .ls h1{
+      font-size: 25px;
+     }
+    .projects{
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 20px auto 30px auto;
+    }
+ }
+
+ @media(max-width:600px){
+ header{
+    font-size: 10px;
+ }
+ .home .ls{
+  width: 350px;
+  margin-left: -30px;
+ }
+ .home .ls p{
+    width: 300px;
+   font-size:16px;
+}
+.pro{
+    width: 380px;
+   }
+.skilinfo{
+    width: 360px;
+}
+.lo{
+    width: 300px;
+    margin: 10px auto;
+}
+
+.aboutinfo{
+    flex-direction: column;
+    width: 360px;
+}
+.aboutinfo .abimg{
+    margin: 10px;
+    width: 90%;
+}
+
+.contac{
+width: 360px;
+}
+
+ }
